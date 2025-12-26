@@ -1,0 +1,49 @@
+# Core JAX dependencies
+jax>=0.4.20
+jaxlib>=0.4.20
+
+# For GPU support, install jax with CUDA (uncomment and modify for your CUDA version):
+# jax[cuda12_pip]>=0.4.20
+
+# Deep learning and optimization
+torch>=2.0.0
+optax>=0.1.7
+einops>=0.7.0
+
+# Hugging Face ecosystem
+huggingface_hub>=0.20.0
+tokenizers>=0.15.0
+transformers>=4.36.0
+datasets>=2.16.0
+
+# RWKV tokenizer
+pyrwkv-tokenizer>=0.1.0
+
+# Configuration and CLI
+hydra-core>=1.3.0
+omegaconf>=2.3.0
+tyro>=0.5.0
+fire>=0.5.0
+
+# Logging and visualization
+wandb>=0.16.0
+matplotlib>=3.8.0
+tqdm>=4.66.0
+
+# Reinforcement learning environments
+gymnax>=0.0.6
+distrax>=0.1.5
+
+# Reasoning and math verification
+reasoning-gym>=0.1.0
+math-verify>=0.1.0
+
+# ANTLR runtime (pinned version for compatibility)
+antlr4-python3-runtime==4.9.*
+
+# Utilities
+importlib_resources>=6.0.0
+numpy>=1.24.0
+
+# Jupyter (optional, for notebooks)
+jupyter>=1.0.0
