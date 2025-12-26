@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ['./src/']
+include = ['hyperscalees*']
+
+[tool.setuptools.package-data]
+jaxrwkv = ["tok_files/*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "hyperscalees.__version__"}
+
+[project]
+name = "hyperscalees"
+readme = "README.md"
+description = "Evolutionary Strategies at the Hyperscale"
+authors = [
+    {name = "Bidipta Sarkar", email = "bidiptas13@gmail.com"}
+]
+dynamic = ["version"]
+license = "GPL-3.0-only"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "jax",
+    "jaxlib",
+    "huggingface_hub",
+    "tokenizers",
+    "einops",
+    "torch",
+    "importlib_resources",
+    "pyrwkv-tokenizer",
+    "hydra-core",
+    "tyro",
+    "optax",
+    "datasets",
+    "gymnax",
+    "distrax",
+    "wandb",
+    "fire",
+    "jupyter",
+    "matplotlib",
+    "reasoning-gym",
+    "transformers",
+    "math-verify",
+    "antlr4-python3-runtime==4.9.*", 
+]
